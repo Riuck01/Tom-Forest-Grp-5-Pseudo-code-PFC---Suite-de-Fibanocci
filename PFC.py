@@ -59,22 +59,3 @@
 
 #FIN
 
-
-
-
-
-
-
-
-
-
-# instruction pfc
-# pas de code
-# a envoyer sur github en public avec nom et prénom
-# pseudo code
-# 2 éléments a dev inconnue
-# on admet que la fct random existe et renvoie un para(p/f/c) aléatoire
-# de même pour l'input
-# pas d'autre chose def par python
-
-
