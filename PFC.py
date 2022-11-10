@@ -1,11 +1,11 @@
 #DEBUT
-
+# On admet que la fonction random existe et renvoie (1, 2, 3) de façon aléatoire associer à la variable randomPFC
 # Definir la fonction PFC
-     # Si PFC a pour valeur 1
+     # Si randomPFC a pour valeur 1
         # Alors retourner "pierre"
-    # Sinon si PFC a pour valeur 2
+    # Sinon si randomPFC a pour valeur 2
         # Alors retourner "feuille"
-    # Sinon si PFC a pour valeur 3
+    # Sinon si randomPFC a pour valeur 3
         # Alors retourner "ciseaux"
     
 #Initialiser le jeu
@@ -26,11 +26,6 @@
             #Alors renvoyer un message d'erreur 
             #Et proposer de choisir a nouveau
 
-# Initialisation de PFCbot
-# On admet que la fonction randomPFC existe et renvoie (1, 2, 3) de façon aléatoire
-# Utiliser la fonction randomPFC
-# retourner la fonction PFC
-
 # Definir l'exécution du jeu
 # Si PFCplayer rentre une valeur entre 1 et 3 
     # Alors utiliser PFCbot
@@ -39,19 +34,19 @@
     # Si PFCplayer vaut "pierre" et que PFCbot vaut "ciseaux"
         # Alors afficher "gagné"
     # Si PFCplayer vaut "pierre" et que PFCbot vaut "feuille"
-    # Alors afficher "perdue"
+        # Alors afficher "perdue"
     # Si PFCplayer vaut "feuille" et que PFCbot vaut "feuille"
         # Alors afficher "égalité"
     # Si PFCplayer vaut "feuille" et que PFCbot vaut "pierre"
         # Alors afficher "gagné"
     # Si PFCplayer vaut "feuille" et que PFCbot vaut "ciseaux"
-    # Alors afficher "perdue"
+        # Alors afficher "perdue"
     # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "ciseaux"
         # Alors afficher "égalité"
     # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "feuille"
         # Alors afficher "gagné"
     # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "pierre"
-    # Alors afficher "perdue"
+        # Alors afficher "perdue"
 # Sinon
     # Afficher ("Erreur : choisir une valeur entre 1 et 3 !") 
 
