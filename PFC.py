@@ -1,61 +1,105 @@
 #DEBUT
-# On admet que la fonction random existe et renvoie (1, 2, 3) de façon aléatoire associer à la variable randomPFC
-# Definir la fonction PFC
-     # Si randomPFC a pour valeur 1
-        # Alors retourner "pierre"
-    # Sinon si randomPFC a pour valeur 2
-        # Alors retourner "feuille"
-    # Sinon si randomPFC a pour valeur 3
-        # Alors retourner "ciseaux"
+from random import *
     
 #Initialiser le jeu
-    #Assigner a la variable ready le retour de l'execution de la fonction input("Etes-vous prêt ? (oui/non) ") 
-        #Si ready est egale "oui" 
-            #Alors poursuivre l'execution du programme
-        #Sinon, arreter le programme
+#Assigner a la variable ready le retour de l'execution de la fonction input("Etes-vous prêt ? (oui/non) ") 
+ready = input("Etes-vous prêt ? (oui/non)")
+    #Si ready est egale "oui"
+if ready == "oui":
+    #Alors poursuivre l'execution du programme
+    print("Nouvelle partie !")
+#Sinon, arreter le programme
+elif ready == "non":
+    print("Fin de la partie")
 
-# Initialisation de PFCplayer
- #Assigner a la variable PFCplayer le retour de l'execution de la fonction input("Pierre Feuille ou ciseaux ? ")
-        #Si PFCplayer est egale "Pierre"
-            #Alors retourner "Pierre"
-        #Sinon si PFCplayer est egale "Feuille"
-            #Alors retourner "Feuille"
-        #Sinon si PFCplayer est egale "Ciseaux"
-            #Alors retourner "Ciseaux"
-        #Sinon si PFCplayer vaut autre chose
-            #Alors renvoyer un message d'erreur 
-            #Et proposer de choisir a nouveau
+# Definir la fonction PFCplayer
+def PFCplayer():
+     # Si PFC a pour valeur 1
+    if PFCplayer == 1:
+        # Alors retourner "Pierre"
+        return ("Pierre")
+    # Sinon si PFC a pour valeur 2
+    elif PFCplayer == 2:
+        # Alors retourner "Feuille"
+        return ("Feuille")
+    # Sinon si PFC a pour valeur 3
+    elif PFCplayer == 3:
+        # Alors retourner "Ciseaux"
+        return ("Ciseaux")
+
+#Definir PFCbot
+def PFCbot():
+    #Cette fonction permet à l'ordinateur de générer aléatoirement un nombre entre 1 et 3
+    #n egal une valeur aléatoire entre 1 et 3
+    n = randint(1,3)
+    #Si n est égal à 1
+    if n == 1:
+        #Alors PFCbot égal "Pierre"
+        PFCbot = "Pierre"
+    #Sinon si n égal 2 
+    elif n == 2:
+        #Alors PFCbot égal "Feuille"
+        PFCbot = "Feuille"
+    #Sinon si n égal 3
+    elif n == 3:
+        #Alors PFCbot égal "Ciseaux"
+        PFCbot = "Ciseaux"
 
 # Definir l'exécution du jeu
-# Si PFCplayer rentre une valeur entre 1 et 3 
+def game():
+    # Si PFCplayer rentre une valeur entre 1 et 3 
+    if PFCplayer == 1 or 2 or 3:
     # Alors utiliser PFCbot
-    # Si PFCplayer vaut "pierre" et que PFCbot vaut "pierre"
-        # Alors afficher "égalité"
-    # Si PFCplayer vaut "pierre" et que PFCbot vaut "ciseaux"
+    # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Pierre"
+        if PFCplayer == "Pierre" and PFCbot == "Pierre" :
+            # Alors afficher "égalité"
+            print("égalité")
+    # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Ciseaux"
+    elif  PFCplayer == "Pierre" and PFCbot == "Ciseaux" :
         # Alors afficher "gagné"
-    # Si PFCplayer vaut "pierre" et que PFCbot vaut "feuille"
+        print("gagné")
+    # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Feuille"
+    elif  PFCplayer == "Pierre" and PFCbot == "Feuille":
         # Alors afficher "perdue"
-    # Si PFCplayer vaut "feuille" et que PFCbot vaut "feuille"
+        print("perdue")
+    # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Feuille"
+    elif  PFCplayer == "Feuille" and PFCbot == "Feuille":
         # Alors afficher "égalité"
-    # Si PFCplayer vaut "feuille" et que PFCbot vaut "pierre"
+        print("égalité")
+    # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Pierre"
+    elif  PFCplayer == "Feuille" and PFCbot == "Pierre":
         # Alors afficher "gagné"
-    # Si PFCplayer vaut "feuille" et que PFCbot vaut "ciseaux"
+        print("gagné")
+    # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Ciseaux"
+    elif  PFCplayer == "Feuille" and PFCbot == "Ciseaux":
         # Alors afficher "perdue"
-    # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "ciseaux"
+        print("perdue")
+    # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Ciseaux"
+    elif  PFCplayer == "Ciseaux" and PFCbot == "Ciseaux":
         # Alors afficher "égalité"
-    # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "feuille"
+        print("égalité")
+    # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Feuille"
+    elif  PFCplayer == "Ciseaux"and PFCbot == "Feuille":
         # Alors afficher "gagné"
-    # Si PFCplayer vaut "ciseaux" et que PFCbot vaut "pierre"
+        print("gagné")
+    # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Pierre"
+    elif  PFCplayer == "Ciseaux" and PFCbot == "Pierre":
         # Alors afficher "perdue"
-# Sinon
-    # Afficher ("Erreur : choisir une valeur entre 1 et 3 !") 
+        ("perdue")
+    # Sinon Afficher ("Erreur : choisir une valeur entre 1 et 3 !") 
+    elif print("Erreur : choisir une valeur possible (Pierre, Feuille ou Ciseaux) !"):
 
 #Definir une fonction relancer le jeu
-    #Demander si le joueur veut continuer
-        #Si le joueur veut continuer
-            #Alors vider la valeur de PFCplayer
-            #Et relancer le programme
-        #Sinon arreter le programme    
+def restart():
+#Demander si le joueur veut continuer
+restart = input(print("Voulez vous continuez ? (oui/non)"))
+#Si le joueur veut continuer
+if restart == "oui": 
+    #Alors vider la valeur de PFCplayer Et relancer le programme
+    del (PFCplayer)
+#Sinon arreter le programme    
+elif restart == "non": 
+    del(PFCplayer)
 
 #FIN
 
