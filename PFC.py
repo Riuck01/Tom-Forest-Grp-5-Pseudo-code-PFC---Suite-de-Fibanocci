@@ -47,42 +47,44 @@ if ready == "oui":
     print("Nouvelle partie ! Choisir, etre Pierre, Feuille et Ciseaux. Ensuite si vous souhaitez arrêter votre partie écrivez : stop")
     while PFCplayer != "stop":
         PFCplayer = input()
+        choixOrdi = PFCbot()
         print("Player: ",PFCplayer)
-        print(PFCbot())
+        print("Bot :",choixOrdi)
+        print(PFCplayer, "VS", choixOrdi)
         # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Pierre"
-        if PFCplayer == "Pierre" and PFCbot() == "Pierre" :
+        if PFCplayer == "Pierre" and choixOrdi == "Pierre" :
              # Alors afficher "égalité"
             print("égalité")
         # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Ciseaux"
-        elif  PFCplayer == "Pierre" and PFCbot() == "Ciseaux" :
+        elif  PFCplayer == "Pierre" and choixOrdi == "Ciseaux" :
             # Alors afficher "gagné"
             print("gagné")
         # Si PFCplayer vaut "Pierre" et que PFCbot vaut "Feuille"
-        elif  PFCplayer == "Pierre" and PFCbot() == "Feuille":
+        elif  PFCplayer == "Pierre" and choixOrdi == "Feuille":
             # Alors afficher "perdue"
             print("perdue")
         # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Feuille"
-        elif  PFCplayer == "Feuille" and PFCbot() == "Feuille":
+        elif  PFCplayer == "Feuille" and choixOrdi == "Feuille":
             # Alors afficher "égalité"
             print("égalité")
         # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Pierre"
-        elif  PFCplayer == "Feuille" and PFCbot() == "Pierre":
+        elif  PFCplayer == "Feuille" and choixOrdi == "Pierre":
             # Alors afficher "gagné"
             print("gagné")
         # Si PFCplayer vaut "Feuille" et que PFCbot vaut "Ciseaux"
-        elif  PFCplayer == "Feuille" and PFCbot() == "Ciseaux":
+        elif  PFCplayer == "Feuille" and choixOrdi == "Ciseaux":
             # Alors afficher "perdue"
             print("perdue")
         # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Ciseaux"
-        elif  PFCplayer == "Ciseaux" and PFCbot() == "Ciseaux":
+        elif  PFCplayer == "Ciseaux" and choixOrdi == "Ciseaux":
             # Alors afficher "égalité"
             print("égalité")
         # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Feuille"
-        elif  PFCplayer == "Ciseaux"and PFCbot() == "Feuille":
+        elif  PFCplayer == "Ciseaux"and choixOrdi == "Feuille":
             # Alors afficher "gagné"
             print("gagné")
         # Si PFCplayer vaut "Ciseaux" et que PFCbot vaut "Pierre"
-        elif  PFCplayer == "Ciseaux" and PFCbot() == "Pierre":
+        elif  PFCplayer == "Ciseaux" and choixOrdi == "Pierre":
             # Alors afficher "perdue"
             print("perdue")
         # Sinon Afficher ("Erreur : choisir une valeur possible (Pierre, Feuille ou Ciseaux) !") 
@@ -91,21 +93,7 @@ if ready == "oui":
 #Sinon, arreter le programme
 elif ready == "non":
     print("Fin de la partie")
+else :
+    print("ERREUR , Veuillez écrire oui ou non")
 
-
-
-
-# #Definir une fonction relancer le jeu
-# def restart():
-#     #Demander si le joueur veut continuer
-#     restart = str(raw_input("Voulez vous continuez ? (oui/non)"))
-#     #Si le joueur veut continuer
-#     if restart == "oui": 
-#         restart_program
-#     #Sinon arreter le programme    
-#     elif restart == "non": 
-#         print("Gameover")
-#     else :
-#         print("ERREUR , Veuillez écrire oui ou non")
-
-# #FIN
+#FIN
