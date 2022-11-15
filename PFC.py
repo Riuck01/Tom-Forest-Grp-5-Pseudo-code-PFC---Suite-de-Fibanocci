@@ -41,11 +41,10 @@ def PFCplayer():
 #Initialiser le jeu
 #Assigner a la variable ready le retour de l'execution de la fonction input("Etes-vous prêt ? (oui/non) ") 
 ready = input("Etes-vous prêt ? (oui/non)")
-    #Si ready est egale "oui"
-if ready == "oui":
-    
-        #Alors poursuivre l'execution du programme
-        print("Nouvelle partie ! Choisir, etre Pierre, Feuille et Ciseaux. Ensuite si vous souhaitez arrêter votre partie écrivez : stop")
+#Si ready est egale "oui"
+if ready == "oui":  
+    #Alors poursuivre l'execution du programme
+    print("Nouvelle partie ! Choisir, etre Pierre, Feuille et Ciseaux. Ensuite si vous souhaitez arrêter votre partie écrivez : stop")
     while PFCplayer != "stop":
         PFCplayer = input()
         print("Player: ",PFCplayer)
